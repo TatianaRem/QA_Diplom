@@ -1,0 +1,126 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "ru.iteco.fmhandroid"
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode 14
+        versionName "1.0.0"
+        testInstrumentationRunner 'io.qameta.allure.android.runners.AllureAndroidJUnitRunner'
+    }
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", '"https://students.netoservices.ru/qamid-diplom-backend/"'
+        }
+        debug {
+            buildConfigField "String", "BASE_URL", '"https://students.netoservices.ru/qamid-diplom-backend/"'
+        }
+    }
+}
+
+dependencies {
+    // Тестирование JUnit
+    testImplementation 'junit:junit:4.13.2'
+
+    // Трассировка
+    implementation "androidx.tracing:tracing:1.1.0"
+
+    // Retrofit для работы с сетью
+    def retrofit_version = "2.9.0"
+    def retrofit_gson_version = "2.9.0"
+    def okhttp_logging_version = "4.9.2"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_gson_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_logging_version"
+
+    // Gson для работы с JSON
+    def gson_version = '2.9.0'
+    implementation "com.google.code.gson:gson:$gson_version"
+
+    // Coroutines для асинхронных операций
+    def coroutines_version = '1.5.2'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutines_version"
+
+    // Fragment и Lifecycle
+    def fragment_version = "1.4.1"
+    def lifecycle_version = "2.4.1"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+    // Room для работы с базой данных
+    def room_version = '2.4.2'
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+
+    // Hilt для внедрения зависимостей
+    def hilt_version = '2.41'
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+    // Android Material Components
+    def material_version = '1.5.0'
+    implementation "com.google.android.material:material:$material_version"
+
+    // AndroidX RecyclerView
+    def recycler_version = '1.2.1'
+    implementation "androidx.recyclerview:recyclerview:$recycler_version"
+
+    // SwipeRefreshLayout для обновления данных
+    def swipe_refresh_version = '1.1.0'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_version"
+
+    // Firebase Analytics и Crashlytics
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+
+    // AndroidX Test и Espresso
+    androidTestImplementation 'androidx.test.ext:junit:1.2.0-alpha04'
+    androidTestImplementation 'androidx.test:rules:1.6.0-alpha03'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.0-alpha04'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.6.0-alpha04'
+
+    // Allure для тестирования
+    androidTestImplementation "io.qameta.allure:allure-kotlin-model:2.4.0"
+    androidTestImplementation "io.qameta.allure:allure-kotlin-commons:2.4.0"
+    androidTestImplementation "io.qameta.allure:allure-kotlin-junit4:2.4.0"
+    androidTestImplementation "io.qameta.allure:allure-kotlin-android:2.4.0"
+
+    // Core library desugaring
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
+}
