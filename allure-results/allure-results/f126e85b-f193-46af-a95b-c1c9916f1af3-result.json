@@ -1,0 +1,53 @@
+{
+    "name": "openNavigationMenu",
+    "start": 1716654463024,
+    "stop": 1716654467279,
+    "stage": "finished",
+    "description": "Открытие навигационного меню",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "f126e85b-f193-46af-a95b-c1c9916f1af3",
+    "historyId": "f26ef936ea6df61aee456ccb666a858d",
+    "fullName": "ru.iteco.fmhandroid.ui.pageObject.tests.MainPageTest.openNavigationMenu",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.MainPageTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "openNavigationMenu"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.MainPageTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(32376)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

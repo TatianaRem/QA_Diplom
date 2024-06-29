@@ -1,0 +1,69 @@
+{
+    "name": "logOutApp",
+    "start": 1716654476271,
+    "stop": 1716654481071,
+    "stage": "finished",
+    "description": "Выход из приложения",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Выход из приложения",
+            "start": 1716654479879,
+            "stop": 1716654479880,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "60cdfa88-cb60-40df-90cf-dff3a9aa6679",
+    "historyId": "b84ac533b2ca13f78e140daba0bba2e9",
+    "fullName": "ru.iteco.fmhandroid.ui.pageObject.tests.MainPageTest.logOutApp",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.MainPageTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "logOutApp"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.MainPageTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(32376)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

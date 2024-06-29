@@ -1,0 +1,117 @@
+{
+    "name": "authorizationSpacesInputFieldLoginAndValidPassword",
+    "start": 1716654244920,
+    "stop": 1716654250437,
+    "stage": "finished",
+    "description": "Авторизация в приложении, используя пробелы вместо логина и корректный пароль",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Ввод в поле Login",
+            "start": 1716654249611,
+            "stop": 1716654249612,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод в поле Password",
+            "start": 1716654249627,
+            "stop": 1716654249628,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку Войти",
+            "start": 1716654249684,
+            "stop": 1716654249684,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка видимости элемента с текстом Авторизация",
+            "start": 1716654250053,
+            "stop": 1716654250053,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "75f90849-c1c6-4644-9285-5ad6e3568f21",
+    "historyId": "b14f350348ff1c19b0a24540a9e5bec0",
+    "fullName": "ru.iteco.fmhandroid.ui.pageObject.tests.AuthorizationTest.authorizationSpacesInputFieldLoginAndValidPassword",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.AuthorizationTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "authorizationSpacesInputFieldLoginAndValidPassword"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.AuthorizationTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(32376)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

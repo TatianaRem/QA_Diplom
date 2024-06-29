@@ -1,0 +1,85 @@
+{
+    "name": "authorizationWhenEmptyInputsFieldLoginAndPassword",
+    "start": 1716654295051,
+    "stop": 1716654300053,
+    "stage": "finished",
+    "description": "Авторизация в приложении, используя пустые поля ввода логина и пароля",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Нажатие на кнопку Войти",
+            "start": 1716654299415,
+            "stop": 1716654299415,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка видимости элемента с текстом Авторизация",
+            "start": 1716654299796,
+            "stop": 1716654299796,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "3823e572-5dc9-4777-b2aa-6e0db84dbee6",
+    "historyId": "f8cbf65a283b97a005e4d8850be9f7ab",
+    "fullName": "ru.iteco.fmhandroid.ui.pageObject.tests.AuthorizationTest.authorizationWhenEmptyInputsFieldLoginAndPassword",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.AuthorizationTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "authorizationWhenEmptyInputsFieldLoginAndPassword"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.AuthorizationTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(32376)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

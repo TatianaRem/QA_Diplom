@@ -37,33 +37,23 @@ public class CreateNewsTest {
     public void setUp() {
         Espresso.onView(isRoot()).perform(Utils.waitDisplayed(appBar.getAppBarFragmentMain(), 5000));
         if (!mainPage.isDisplayedButtonProfile()) {
-            authorizationPage.successfulAuthorization();
+            authorizationPage.successfulAuthorization(Credentials.LOGIN, Credentials.PASSWORD);
         }
     }
 
     @Description("Успешное создание новости")
-    // при одинаковых заголовках у новостей падает, так как нет уникального идентификатора
     @Test
     public void successfulNewsCreation() {
-        // Переход на страницу новостей
         appBar.switchToNews();
-        // Переход на панель управления новостями
         newsPage.switchControlPanelNews();
-        // Добавление новой новости
         controlPanelNews.addNews();
-        // Добавление категории
-        createNews.addCategory("Объявление");
-        // Добавление заголовка новости
-        createNews.addTitle("Создание новости");
-        // Добавление даты
+        createNews.addCategory(TestData.NEWS_CATEGORY);
+        createNews.addTitle(TestData.NEWS_TITLE);
         createNews.addDate(Utils.currentDate());
-        // Добавление времени
         createNews.addTime("20:00");
-        // Добавление описания
-        createNews.addDescription("Описание новости");
-        // Нажатие на кнопку сохранения
+        createNews.addDescription(TestData.NEWS_DESCRIPTION);
         createNews.pressSave();
-        controlPanelNews.searchNewsAndCheckIsDisplayed("Создание новости");
+        controlPanelNews.searchNewsAndCheckIsDisplayed(TestData.NEWS_TITLE);
     }
 
     @Description("Создание новости с датой публикации в будущем")
@@ -72,16 +62,14 @@ public class CreateNewsTest {
         appBar.switchToNews();
         newsPage.switchControlPanelNews();
         controlPanelNews.addNews();
-        createNews.addCategory("Объявление");
-        String text = "Создание новости в будущем";
-        createNews.addTitle(text);
+        createNews.addCategory(TestData.NEWS_CATEGORY);
+        createNews.addTitle(TestData.NEWS_TITLE_FUTURE);
         String pastDate = Utils.dateMore1Years();
         createNews.addDate(pastDate);
         createNews.addTime("20:00");
-        createNews.addDescription("Описание новости в будущем");
+        createNews.addDescription(TestData.NEWS_DESCRIPTION_FUTURE);
         createNews.pressSave();
-        // Проверка отображения ошибки
-        createNews.checkErrorDisplay("Неверная дата публикации");
+        createNews.checkErrorDisplay(TestData.NEWS_PUBLICATION_ERROR);
     }
 
     @Description("Создание новости с пустыми полями")

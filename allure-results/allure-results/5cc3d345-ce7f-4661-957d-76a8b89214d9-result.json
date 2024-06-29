@@ -1,0 +1,85 @@
+{
+    "name": "openFormFilterNews",
+    "start": 1716654488117,
+    "stop": 1716654493424,
+    "stage": "finished",
+    "description": "Открытие формы 'Фильтровать новости'",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Переход на страницу Новости",
+            "start": 1716654491706,
+            "stop": 1716654491707,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку 'Фильтровать' новость",
+            "start": 1716654492713,
+            "stop": 1716654492713,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "5cc3d345-ce7f-4661-957d-76a8b89214d9",
+    "historyId": "f72a8ef115533c7150e6af7cce707b62",
+    "fullName": "ru.iteco.fmhandroid.ui.pageObject.tests.NewsPageTest.openFormFilterNews",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.NewsPageTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "openFormFilterNews"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.NewsPageTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(32376)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

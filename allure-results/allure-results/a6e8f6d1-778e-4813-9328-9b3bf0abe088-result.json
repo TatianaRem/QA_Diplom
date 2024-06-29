@@ -1,0 +1,85 @@
+{
+    "name": "shouldOpenPageWithThematicArticles",
+    "start": 1716654515447,
+    "stop": 1716654519739,
+    "stage": "finished",
+    "description": "Открытие страницы 'Главное-жить любя'",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Переход на страницу Тематические цитаты",
+            "start": 1716654519086,
+            "stop": 1716654519086,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка нахождения на экране Тематические статьи",
+            "start": 1716654519507,
+            "stop": 1716654519507,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "a6e8f6d1-778e-4813-9328-9b3bf0abe088",
+    "historyId": "7361fdcd0ffa5688eb326eabf71720bb",
+    "fullName": "ru.iteco.fmhandroid.ui.pageObject.tests.ThematicArticleTest.shouldOpenPageWithThematicArticles",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.ThematicArticleTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldOpenPageWithThematicArticles"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.pageObject.tests.ThematicArticleTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(32376)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

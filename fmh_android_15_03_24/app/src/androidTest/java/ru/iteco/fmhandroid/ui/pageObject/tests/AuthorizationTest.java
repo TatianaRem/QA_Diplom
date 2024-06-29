@@ -20,7 +20,6 @@ import ru.iteco.fmhandroid.ui.pageObject.pageObject.AuthorizationPage;
 import ru.iteco.fmhandroid.ui.pageObject.pageObject.MainPage;
 import ru.iteco.fmhandroid.ui.pageObject.pageObject.WarningError;
 
-
 @LargeTest
 @RunWith(AllureAndroidJUnit4.class)
 public class AuthorizationTest {
@@ -45,8 +44,8 @@ public class AuthorizationTest {
     @Test
     public void successfulAuthorization() {
         authorizationPage.visibilityElement();
-        authorizationPage.inputInFieldLogin("login2");
-        authorizationPage.inputInFieldPassword("password2");
+        authorizationPage.inputInFieldLogin(Credentials.VALID_LOGIN);
+        authorizationPage.inputInFieldPassword(Credentials.VALID_PASSWORD);
         authorizationPage.pressButton();
         mainPage.isDisplayedButtonProfile();
     }
@@ -54,8 +53,8 @@ public class AuthorizationTest {
     @Description("Авторизация в приложении, используя пробелы вместо логина и корректный пароль")
     @Test
     public void authorizationSpacesInputFieldLoginAndValidPassword() {
-        authorizationPage.inputInFieldLogin("        ");
-        authorizationPage.inputInFieldPassword("password2");
+        authorizationPage.inputInFieldLogin(Credentials.SPACES);
+        authorizationPage.inputInFieldPassword(Credentials.VALID_PASSWORD);
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
     }
@@ -63,8 +62,8 @@ public class AuthorizationTest {
     @Description("Авторизация в приложении, используя корректный логин и пробелы вместо пароля")
     @Test
     public void authorizationSpacesInputFieldPasswordAndValidLogin() {
-        authorizationPage.inputInFieldLogin("login2");
-        authorizationPage.inputInFieldPassword("         ");
+        authorizationPage.inputInFieldLogin(Credentials.VALID_LOGIN);
+        authorizationPage.inputInFieldPassword(Credentials.SPACES);
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
     }
@@ -72,8 +71,8 @@ public class AuthorizationTest {
     @Description("Авторизация в приложении, используя пробелы во всех полях ввода")
     @Test
     public void authorizationSpacesInputsField() {
-        authorizationPage.inputInFieldLogin("         ");
-        authorizationPage.inputInFieldPassword("         ");
+        authorizationPage.inputInFieldLogin(Credentials.SPACES);
+        authorizationPage.inputInFieldPassword(Credentials.SPACES);
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
     }
@@ -81,16 +80,15 @@ public class AuthorizationTest {
     @Description("Авторизация в приложении, используя пустое поле ЛОГИН и корректный пароль")
     @Test
     public void authorizationWhenEmptyInputFieldLogin() {
-        authorizationPage.inputInFieldPassword("password2");
+        authorizationPage.inputInFieldPassword(Credentials.VALID_PASSWORD);
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
-
     }
 
     @Description("Авторизация в приложении, используя корректный логин и пустое поле ПАРОЛЬ")
     @Test
     public void authorizationWhenEmptyInputFieldPassword() {
-        authorizationPage.inputInFieldLogin("login2");
+        authorizationPage.inputInFieldLogin(Credentials.VALID_LOGIN);
         authorizationPage.inputInFieldPassword(" ");
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
@@ -106,8 +104,8 @@ public class AuthorizationTest {
     @Description("Авторизация в приложении, введя пробел в начале логина ")
     @Test
     public void authorizationSpaceBeginningLogin() {
-        authorizationPage.inputInFieldLogin(" login2");
-        authorizationPage.inputInFieldPassword("password2");
+        authorizationPage.inputInFieldLogin(" " + Credentials.VALID_LOGIN);
+        authorizationPage.inputInFieldPassword(Credentials.VALID_PASSWORD);
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
         warningError.windowError();
@@ -116,8 +114,8 @@ public class AuthorizationTest {
     @Description("Авторизация в приложении, введя пробел в конце логина ")
     @Test
     public void authorizationSpaceInEndBLogin() {
-        authorizationPage.inputInFieldLogin("login2 ");
-        authorizationPage.inputInFieldPassword("password2");
+        authorizationPage.inputInFieldLogin(Credentials.VALID_LOGIN + " ");
+        authorizationPage.inputInFieldPassword(Credentials.VALID_PASSWORD);
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
         warningError.windowError();
@@ -126,8 +124,8 @@ public class AuthorizationTest {
     @Description("Авторизация в приложении, введя пробел вначале пароля")
     @Test
     public void authorizationSpaceBeginningPassword() {
-        authorizationPage.inputInFieldLogin("login2");
-        authorizationPage.inputInFieldPassword(" password2");
+        authorizationPage.inputInFieldLogin(Credentials.VALID_LOGIN);
+        authorizationPage.inputInFieldPassword(" " + Credentials.VALID_PASSWORD);
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
         warningError.windowError();
@@ -136,8 +134,8 @@ public class AuthorizationTest {
     @Description("Авторизация в приложении, введя пробел в конце пароля ")
     @Test
     public void authorizationSpaceInEndPassword() {
-        authorizationPage.inputInFieldLogin("login2");
-        authorizationPage.inputInFieldPassword("password2 ");
+        authorizationPage.inputInFieldLogin(Credentials.VALID_LOGIN);
+        authorizationPage.inputInFieldPassword(Credentials.VALID_PASSWORD + " ");
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
         warningError.windowError();
@@ -146,8 +144,8 @@ public class AuthorizationTest {
     @Description("Авторизация в приложениии, используя вместо логина -пароль и вместо пароля -логин")
     @Test
     public void authorizationPasswordInsteadOfLogin() {
-        authorizationPage.inputInFieldLogin("password2");
-        authorizationPage.inputInFieldPassword("login2");
+        authorizationPage.inputInFieldLogin(Credentials.VALID_PASSWORD);
+        authorizationPage.inputInFieldPassword(Credentials.VALID_LOGIN);
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
     }
@@ -156,7 +154,7 @@ public class AuthorizationTest {
     @Test
     public void authorizationUsingRegisterInLogin() {
         authorizationPage.inputInFieldLogin("LOGIn2");
-        authorizationPage.inputInFieldPassword("password2");
+        authorizationPage.inputInFieldPassword(Credentials.VALID_PASSWORD);
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
     }
@@ -164,18 +162,17 @@ public class AuthorizationTest {
     @Description("Авторизация в приложении, используя корректный пароль, введенный разным регистром в поле ПАРОЛЬ")
     @Test
     public void authorizationUsingRegisterInPassword() {
-        authorizationPage.inputInFieldLogin("login2");
+        authorizationPage.inputInFieldLogin(Credentials.VALID_LOGIN);
         authorizationPage.inputInFieldPassword("PASSWORD2");
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
-
     }
 
     @Description("Ввод специальных символов в поле ЛОГИН и в поле ПАРОЛЬ")
     @Test
     public void authorizationUsingSpecialSymbolInFailedLogin() {
-        authorizationPage.inputInFieldLogin("log#%@`<|&?>*");
-        authorizationPage.inputInFieldPassword("pass#%@`<|&?>*\"");
+        authorizationPage.inputInFieldLogin(Credentials.SPECIAL_CHARACTERS);
+        authorizationPage.inputInFieldPassword(Credentials.SPECIAL_CHARACTERS);
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
     }
@@ -183,10 +180,9 @@ public class AuthorizationTest {
     @Description("Авторизация при введении в поле ЛОГИН И в поле ПАРОЛЬ кириллицы")
     @Test
     public void authorizationUsingCyrillicInFailedLogin() {
-        authorizationPage.inputInFieldLogin("логин2");
-        authorizationPage.inputInFieldPassword("пароль2");
+        authorizationPage.inputInFieldLogin(Credentials.CYRILLIC_LOGIN);
+        authorizationPage.inputInFieldPassword(Credentials.CYRILLIC_PASSWORD);
         authorizationPage.pressButton();
         authorizationPage.visibilityElement();
     }
 }
-

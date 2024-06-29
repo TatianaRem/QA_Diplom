@@ -28,8 +28,6 @@ public class AboutAppPageTest {
     MainPage mainPage = new MainPage();
 
     AboutAppPage aboutAppPage = new AboutAppPage();
-    String urlPrivacyPolicy = "https://vhospice.org/#/privacy-policy";
-    String urlTermsOfUse = "https://vhospice.org/#/terms-of-use";
 
     @Rule
     public ActivityScenarioRule<AppActivity> mActivityScenarioRule =
@@ -39,7 +37,7 @@ public class AboutAppPageTest {
     public void setUp() {
         Espresso.onView(isRoot()).perform(Utils.waitDisplayed(appBar.getAppBarFragmentMain(), 5000));
         if (!mainPage.isDisplayedButtonProfile()) {
-            authorizationPage.successfulAuthorization();
+            authorizationPage.successfulAuthorization(Credentials.LOGIN, Credentials.PASSWORD);
         }
     }
 
@@ -49,7 +47,7 @@ public class AboutAppPageTest {
         //переход на страницу "О приложении"
         appBar.AboutApp();
         //переход по ссылке "Политика конфиденциальности"
-        aboutAppPage.intentPrivatePolicy(urlPrivacyPolicy);
+        aboutAppPage.intentPrivatePolicy(URLs.PRIVACY_POLICY);
         aboutAppPage.back();
     }
 
@@ -57,7 +55,7 @@ public class AboutAppPageTest {
     @Test
     public void openTermsOfUse() {
         appBar.AboutApp();
-        aboutAppPage.intentTermOfUse(urlTermsOfUse);
+        aboutAppPage.intentTermOfUse(URLs.TERMS_OF_USE);
         aboutAppPage.back();
     }
 
@@ -68,4 +66,3 @@ public class AboutAppPageTest {
         aboutAppPage.getButtonBack();
     }
 }
-
